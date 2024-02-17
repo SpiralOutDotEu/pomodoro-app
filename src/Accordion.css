@@ -1,0 +1,54 @@
+/* Accordion.css */
+.accordion-item {
+    margin-bottom: 10px;
+    border: 1px solid #444; /* Darker border for contrast */
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 400px; /* Limiting width */
+    margin-left: auto; /* Centering the accordion */
+    margin-right: auto;
+    background-color: #333; /* Dark background */
+  }
+  
+  .accordion-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #222; /* Darker shade for the title bar */
+    color: #fff; /* Light text color */
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .accordion-title:hover {
+    background-color: #1a1a1a; /* Slightly darker on hover */
+  }
+  
+  .accordion-title h2 {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .accordion-title span {
+    font-size: 25px;
+    color: #fff; /* Ensure icon matches text color */
+  }
+  
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: #2a2a2a; /* Slightly lighter than title bar for contrast */
+    color: #ddd; /* Light grey text for readability */
+    padding: 0 15px;
+  }
+  
+  .accordion-text {
+    margin: 15px 0;
+    line-height: 1.5;
+  }
+  
