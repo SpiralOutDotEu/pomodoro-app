@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import "./PomodoroTimer.css"
 import PomodoroInfoAccordion from './PomodoroInfoAccordion';
 const PomodoroTimer = () => {
@@ -14,7 +14,6 @@ const PomodoroTimer = () => {
   const [pomodorosBeforeLongBreak, setPomodorosBeforeLongBreak] = useState(4);
 
   const [notificationsEnabled, setNotificationsEnabled] = useState(false);
-  const notificationSent = useRef(false);
 
   useEffect(() => {
     // Check notification permission on load
