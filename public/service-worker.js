@@ -14,10 +14,12 @@ self.addEventListener('install', (event) => {
       caches.open(CACHE_NAME)
         .then((cache) => {
           console.log('Opened cache');
-          return cache.addAll(urlsToCache)
-            .catch(error => {
-              console.error('Failed to cache resources:', error);
-            });
+          return Promise.all(
+            urlsToCache.map(url => fetch(url)
+              .then(response => cache.put(url, response))
+              .catch(error => console.error('Failed to cache resource:', error))
+            )
+          );
         })
     );
   });
