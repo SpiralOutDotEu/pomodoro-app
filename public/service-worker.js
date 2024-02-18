@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-globals */
 const CACHE_NAME = 'pomodoro-timer-cache-v1';
 const urlsToCache = [
   '/',
@@ -7,8 +8,6 @@ const urlsToCache = [
   '/manifest.json', // If you have a manifest file
   // Add other static assets to cache here
 ];
-
-const self = window;
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
